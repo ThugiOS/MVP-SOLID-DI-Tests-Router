@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person: Codable {
-    let firstName: String
-    let lastName: String
+struct Person {
+    var firstName: String
+    var lastName: String
 }
