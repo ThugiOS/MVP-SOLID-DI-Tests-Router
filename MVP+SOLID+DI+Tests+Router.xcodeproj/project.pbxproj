@@ -18,6 +18,7 @@
 		27A92E432A6EA27D00E39914 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E422A6EA27D00E39914 /* Person.swift */; };
 		27A92E452A6EA3ED00E39914 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E442A6EA3ED00E39914 /* MainPresenter.swift */; };
 		27A92E4B2A6EB62200E39914 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E4A2A6EB62200E39914 /* ModuleBuilder.swift */; };
+		27A92E502A7115BD00E39914 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E4F2A7115BD00E39914 /* MainPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		27A92E422A6EA27D00E39914 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		27A92E442A6EA3ED00E39914 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		27A92E4A2A6EB62200E39914 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		27A92E4F2A7115BD00E39914 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		27A92E282A6E8FCD00E39914 /* MVP+SOLID+DI+Tests+RouterTests */ = {
 			isa = PBXGroup;
 			children = (
+				27A92E4E2A71125C00E39914 /* TestMainModule */,
 				27A92E292A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterTests.swift */,
 			);
 			path = "MVP+SOLID+DI+Tests+RouterTests";
@@ -163,6 +166,14 @@
 				27A92E422A6EA27D00E39914 /* Person.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		27A92E4E2A71125C00E39914 /* TestMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				27A92E4F2A7115BD00E39914 /* MainPresenterTest.swift */,
+			);
+			path = TestMainModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A92E2A2A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterTests.swift in Sources */,
+				27A92E502A7115BD00E39914 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
