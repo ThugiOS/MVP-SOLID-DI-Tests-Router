@@ -23,13 +23,13 @@ class MockView: MainViewProtocol {
 final class MainPresenterTest: XCTestCase {
     
     var view: MockView!
-    var model: Person!
+    var model: Comment!
     var presenter: MainPresenter!
 
     override func setUpWithError() throws {
         // Поместите код установки здесь. Этот метод вызывается перед вызовом каждого тестового метода в классе.
         view = MockView()
-        model = Person(firstName: "Baz", lastName: "Bar")
+        model = Comment(firstName: "Baz", lastName: "Bar")
         presenter = MainPresenter(view: view, person: model)
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277341402A72B0EC0005A379 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773413F2A72B0EC0005A379 /* NetworkService.swift */; };
 		27A92E132A6E8FCB00E39914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E122A6E8FCB00E39914 /* AppDelegate.swift */; };
 		27A92E152A6E8FCB00E39914 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E142A6E8FCB00E39914 /* SceneDelegate.swift */; };
 		27A92E172A6E8FCB00E39914 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E162A6E8FCB00E39914 /* MainViewController.swift */; };
@@ -15,7 +16,7 @@
 		27A92E2A2A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E292A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterTests.swift */; };
 		27A92E342A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E332A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterUITests.swift */; };
 		27A92E362A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E352A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterUITestsLaunchTests.swift */; };
-		27A92E432A6EA27D00E39914 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E422A6EA27D00E39914 /* Person.swift */; };
+		27A92E432A6EA27D00E39914 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E422A6EA27D00E39914 /* Comment.swift */; };
 		27A92E452A6EA3ED00E39914 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E442A6EA3ED00E39914 /* MainPresenter.swift */; };
 		27A92E4B2A6EB62200E39914 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E4A2A6EB62200E39914 /* ModuleBuilder.swift */; };
 		27A92E502A7115BD00E39914 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E4F2A7115BD00E39914 /* MainPresenterTest.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2773413F2A72B0EC0005A379 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		27A92E0F2A6E8FCB00E39914 /* MVP+SOLID+DI+Tests+Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP+SOLID+DI+Tests+Router.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A92E122A6E8FCB00E39914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A92E142A6E8FCB00E39914 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		27A92E2F2A6E8FCD00E39914 /* MVP+SOLID+DI+Tests+RouterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP+SOLID+DI+Tests+RouterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A92E332A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_SOLID_DI_Tests_RouterUITests.swift; sourceTree = "<group>"; };
 		27A92E352A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_SOLID_DI_Tests_RouterUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		27A92E422A6EA27D00E39914 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		27A92E422A6EA27D00E39914 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		27A92E442A6EA3ED00E39914 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		27A92E4A2A6EB62200E39914 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		27A92E4F2A7115BD00E39914 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
@@ -82,6 +84,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277341412A72B0F40005A379 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2773413F2A72B0EC0005A379 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		277341422A72B12C0005A379 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27A92E122A6E8FCB00E39914 /* AppDelegate.swift */,
+				27A92E142A6E8FCB00E39914 /* SceneDelegate.swift */,
+				27A92E1B2A6E8FCD00E39914 /* Assets.xcassets */,
+				27A92E1D2A6E8FCD00E39914 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		27A92E062A6E8FCB00E39914 = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +126,10 @@
 		27A92E112A6E8FCB00E39914 /* MVP+SOLID+DI+Tests+Router */ = {
 			isa = PBXGroup;
 			children = (
-				27A92E122A6E8FCB00E39914 /* AppDelegate.swift */,
-				27A92E142A6E8FCB00E39914 /* SceneDelegate.swift */,
 				27A92E4A2A6EB62200E39914 /* ModuleBuilder.swift */,
+				277341422A72B12C0005A379 /* App */,
+				277341412A72B0F40005A379 /* ServiceLayer */,
 				27A92E462A6EA8FD00E39914 /* Main */,
-				27A92E1B2A6E8FCD00E39914 /* Assets.xcassets */,
-				27A92E1D2A6E8FCD00E39914 /* LaunchScreen.storyboard */,
 				27A92E202A6E8FCD00E39914 /* Info.plist */,
 			);
 			path = "MVP+SOLID+DI+Tests+Router";
@@ -163,7 +182,7 @@
 		27A92E492A6EADB900E39914 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				27A92E422A6EA27D00E39914 /* Person.swift */,
+				27A92E422A6EA27D00E39914 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,9 +328,10 @@
 				27A92E452A6EA3ED00E39914 /* MainPresenter.swift in Sources */,
 				27A92E172A6E8FCB00E39914 /* MainViewController.swift in Sources */,
 				27A92E132A6E8FCB00E39914 /* AppDelegate.swift in Sources */,
-				27A92E432A6EA27D00E39914 /* Person.swift in Sources */,
+				27A92E432A6EA27D00E39914 /* Comment.swift in Sources */,
 				27A92E152A6E8FCB00E39914 /* SceneDelegate.swift in Sources */,
 				27A92E4B2A6EB62200E39914 /* ModuleBuilder.swift in Sources */,
+				277341402A72B0EC0005A379 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,58 +11,57 @@ class MainViewController: UIViewController {
     
     var presenter: MainViewPresenterProtocol!
         
-    private let greetingLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 26, weight: .regular)
-        label.text = "∆¬…≥≤µ˜∫√ç≈Ω^"
-        return label
-    }()
-    private let buttonAction: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .darkGray
-        button.setTitle("Кнопка", for: .normal)
-        button.layer.cornerRadius = 10.0
-        return button
+    private let tableView: UITableView = {
+        let tv = UITableView()
+        tv.backgroundColor = .systemBackground
+
+        return tv
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
-        self.buttonAction.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.dataSource = self
+//        tableView.delegate = self
     }
 
     private func setupUI() {
-        self.view.backgroundColor = .magenta
+        self.view.backgroundColor = .red
+        self.view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.addSubview(greetingLabel)
-        self.view.addSubview(buttonAction)
-
-        greetingLabel.translatesAutoresizingMaskIntoConstraints = false
-        buttonAction.translatesAutoresizingMaskIntoConstraints = false
-
         NSLayoutConstraint.activate([
-            greetingLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 300.0),
-            greetingLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            
-            buttonAction.topAnchor.constraint(equalTo: self.greetingLabel.bottomAnchor, constant: 30.0),
-            buttonAction.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            buttonAction.widthAnchor.constraint(equalToConstant: 100.0),
+            tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
         ])
-    }
-    
-    @objc private func buttonTapped() {
-        self.presenter.showGreeting()
     }
 }
 
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.comments?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let comment = presenter.comments?[indexPath.row]
+        cell.textLabel?.text = comment?.body
+        return cell
+    }
+}
 
 // Cвязали наш VC с Презенторем через протокол
 extension MainViewController: MainViewProtocol {
-    func setGreeting(greeting: String) {
-        self.greetingLabel.text = greeting
+    func succes() {
+        tableView.reloadData()
+    }
+    
+    func failure(error: Error) {
+        print(error.localizedDescription)
     }
 }
 
