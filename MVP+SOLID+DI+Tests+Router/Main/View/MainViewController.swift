@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.delegate = self
     }
 
     private func setupUI() {
@@ -51,6 +51,15 @@ extension MainViewController: UITableViewDataSource {
         let comment = presenter.comments?[indexPath.row]
         cell.textLabel?.text = comment?.body
         return cell
+    }
+}
+
+// переход если нажали на вьюшку
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = presenter.comments?[indexPath.row]
+        let detailVC = ModelBuilder.createDetailModule(comment: comment)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 

@@ -79,8 +79,6 @@ class MainPresenter: MainViewPresenterProtocol {
         getComments()
     }
     
-
-    
     func getComments() {
         networkService.getComments { [weak self] result in
             guard let self = self else { return }
