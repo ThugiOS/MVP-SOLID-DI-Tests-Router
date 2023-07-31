@@ -8,20 +8,20 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    
+
     var presenter: MainViewPresenterProtocol!
-        
+
     private let tableView: UITableView = {
         let tv = UITableView()
         tv.backgroundColor = .systemBackground
 
         return tv
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = .red
         self.view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: self.view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
@@ -45,7 +45,7 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.comments?.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let comment = presenter.comments?[indexPath.row]
@@ -58,8 +58,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let comment = presenter.comments?[indexPath.row]
-        let detailVC = ModelBuilder.createDetailModule(comment: comment)
-        navigationController?.pushViewController(detailVC, animated: true)
+        presenter.tapOnTheComment(comment: comment)
     }
 }
 
@@ -68,9 +67,10 @@ extension MainViewController: MainViewProtocol {
     func succes() {
         tableView.reloadData()
     }
-    
+
     func failure(error: Error) {
         print(error.localizedDescription)
     }
 }
+
 
