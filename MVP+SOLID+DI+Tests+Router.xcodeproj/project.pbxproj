@@ -11,6 +11,7 @@
 		277341672A73BD0E0005A379 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277341662A73BD0E0005A379 /* DetailPresenter.swift */; };
 		2773416A2A73CCF90005A379 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277341692A73CCF90005A379 /* DetailViewController.swift */; };
 		2773416D2A7402D30005A379 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773416C2A7402D30005A379 /* Router.swift */; };
+		2773416F2A7818370005A379 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773416E2A7818370005A379 /* RouterTest.swift */; };
 		27A92E132A6E8FCB00E39914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E122A6E8FCB00E39914 /* AppDelegate.swift */; };
 		27A92E152A6E8FCB00E39914 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E142A6E8FCB00E39914 /* SceneDelegate.swift */; };
 		27A92E172A6E8FCB00E39914 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A92E162A6E8FCB00E39914 /* MainViewController.swift */; };
@@ -47,6 +48,7 @@
 		277341662A73BD0E0005A379 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		277341692A73CCF90005A379 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2773416C2A7402D30005A379 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2773416E2A7818370005A379 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 		27A92E0F2A6E8FCB00E39914 /* MVP+SOLID+DI+Tests+Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP+SOLID+DI+Tests+Router.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A92E122A6E8FCB00E39914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A92E142A6E8FCB00E39914 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				27A92E4F2A7115BD00E39914 /* MainPresenterTest.swift */,
+				2773416E2A7818370005A379 /* RouterTest.swift */,
 			);
 			path = TestMainModule;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A92E2A2A6E8FCD00E39914 /* MVP_SOLID_DI_Tests_RouterTests.swift in Sources */,
+				2773416F2A7818370005A379 /* RouterTest.swift in Sources */,
 				27A92E502A7115BD00E39914 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
